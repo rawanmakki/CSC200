@@ -4,11 +4,58 @@ public class Driver
  { 
  	public static void main(String[] args) 
  	{ 
-
-		System.out.println(Driver.decimalToBase(11, 2));
+ 		String s = "hello world";
+ 	//	String answer = 
+ 	//	System.out.println(answer);
+ 		//String answer = Driver.decimalToBase(num);
+	//	System.out.println(Driver.decimalToBase(11, 2));
+		//System.out.println(answer);
+		System.out.println(Driver.toCharArray(s));
+ 	}
+ 	
+ 	
+ 	static char[] toCharArray(String s){
+ 		String result = "";
+ 		char[] A = s.toCharArray();
  		
+ 	      for (int i = 0 ; i < s.length() ; i++ ) {  
+ 	    	  if (s.charAt(i)== 'h' || s.charAt(i)== 'e'||s.charAt(i)== 'l'||s.charAt(i)== 'l'||s.charAt(i)== 'o')
+ 	    	  
+ 	    	result = s.charAt(i) + "";
+	 
+ 	         }
+
+ 	       
+
+ 	         
+ 	         return A;
+ 	       }
+ 	     
+ 	    
+ 	static String substring(String s, int beginPos, int endPos){
+ 		String answer = "";
+ 		
+ 		
+ 		
+ 		for (int i = beginPos; i < endPos; i++){
+ 			
+ 			answer += s.charAt(i);
+ 			
+ 		}
+ 		return answer;
+ 	}
+	static String substring(String s,int pos)
+	{
+		String answer = "";
+		for (int i = pos; i < s.length(); i++)
+		{
+			answer += s.charAt(i);
+			//answer = answer + s.charAt(i);
+		}
+			return answer;
+	}
  
- 	} 
+ 	
  	static String decimalToBase(int decimalNumber, int radix){
  		
  		//params - decimalNumber, radix
