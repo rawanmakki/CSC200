@@ -13,18 +13,25 @@ public class Driver
 	}
 	static void bubbleSort(int[] ar) 
 	{ 
-		 int temp;
-		 for (int i = 0; i < ar.length; i++) 
-		for (int j = 0; j < ar.length - 1; j++)
-		 if (ar[j] > ar[j + 1]) 
-		{ 
-		temp = ar[j] + ar[j + 1]; ar[j + 1] = ar[j] - ar[j + 1]; 
-		ar[j] = temp; 
+		 int swap;
+		 int number; 
+		 for (int i = 1; i < ar.length; i++){
+			 
+			 number = i;
+			 while(number !=0 && ar[number] < ar [number -1])
+			 {
+				 
+				 swap = ar[number];
+				 ar[number] = ar[number -1];
+				 ar[number -1] = swap;
+				 number--;
+		 }
+		 
 		} 
 
  	} 
 
-	//Homework
+	
 	static void sortArray(int[] ar)
 	{
 		for (int i = 1; i < ar.length; i++){
